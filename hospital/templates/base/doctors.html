@@ -1,0 +1,35 @@
+{% extends 'base/index.html' %}
+{% load static %}
+{% block title %} doctors {% endblock%}
+{% block content %}
+
+<section class="section doctor" style="background-image: url('{% static 'images/hero-bg.png'%}')" aria-label="doctor">
+  <div class="container">
+    <p class="section-subtitle text-center">Our Doctors</p>
+    <h2 class="h2 section-title text-center">We take pride in our exceptional team of doctors, each a specialist in their respective fields.</h2>
+
+    <div class="doctor-card-container has-scrollbar">
+  {% for doctor in doctors %}
+  <div class="doctor-card scrollbar-item">
+    <div class="card-banner img-holder">
+      {% if doctor.doc_image %}
+        <img src="{{ doctor.doc_image.url }}" alt="{{ doctor.first_name }} {{ doctor.last_name }}" class="img-cover">
+      {% else %}
+        <img src="{% static 'images/placeholder-doctor.png' %}" alt="No Image Available" class="img-cover">
+      {% endif %}
+    </div>
+    <h3 class="h3">
+      <a href="#" class="card-title">Dr. {{ doctor.first_name }} {{ doctor.last_name }}</a>
+    </h3>
+    <p class="card-subtitle">{{ doctor.doc_spec }}</p>
+    <p class="card-department">{{ doctor.department.dep_name }} Department</p>
+  </div>
+  {% endfor %}
+</div>
+
+  </div>
+</section>
+{% endblock %}
+
+
+
