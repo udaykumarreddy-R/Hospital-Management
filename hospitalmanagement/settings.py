@@ -25,14 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-v2)v#w(n3ai@0t!)xuyy3a8su6qovv8)rc=@9=fty!lx2)np)="
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #new
 TEMPLATE_DEBUG = DEBUG
 #new
 print("BASE_DIR: ", BASE_DIR)
 print("Templates DIRS: ", os.path.join(BASE_DIR, 'hospital', 'templates'))
 
-ALLOWED_HOSTS = ['hospital-management-3-jlpn.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -56,7 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -99,14 +99,15 @@ WSGI_APPLICATION = "hospitalmanagement.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hospitalmanagement_o0ed',
-        'USER': 'udayram01',
-        'PASSWORD': 'IdVOoripBExtoizdTMH8XytNfnqksFvI',
-        'HOST': 'dpg-d1c31ube5dus73f54ip0-a',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'hospitalmanagement',
+        'USER': 'root',
+        'PASSWORD': 'Uday@236',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
+
 
 
 # Password validation
@@ -149,7 +150,7 @@ STATICFILES_DIRS = [
 ]
 import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 
 
@@ -168,20 +169,3 @@ AUTHENTICATION_BACKENDS = [
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'patient_dashboard'  # Where to redirect after successful login
 LOGOUT_REDIRECT_URL = 'homebase'
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "df)#8_fa96pe7vl$y!4esh5sio&@!7umkt*2^dyqy#1&xu@(!6")
-
-import logging
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'root': {
-        'handlers': ['console'],
-        'level': 'DEBUG',
-    },
-}
