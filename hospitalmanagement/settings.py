@@ -32,7 +32,7 @@ TEMPLATE_DEBUG = DEBUG
 print("BASE_DIR: ", BASE_DIR)
 print("Templates DIRS: ", os.path.join(BASE_DIR, 'hospital', 'templates'))
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['hospital-management-3-jlpn.onrender.com']
 
 
 # Application definition
@@ -169,4 +169,4 @@ AUTHENTICATION_BACKENDS = [
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'patient_dashboard'  # Where to redirect after successful login
 LOGOUT_REDIRECT_URL = 'homebase'
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "fallback-secret")
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "df)#8_fa96pe7vl$y!4esh5sio&@!7umkt*2^dyqy#1&xu@(!6")
