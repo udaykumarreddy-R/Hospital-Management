@@ -99,20 +99,14 @@ WSGI_APPLICATION = "hospitalmanagement.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sql12786240',
-        'USER': 'sql12786240',
-        'PASSWORD': 'dmJ5GUFALA',
-        'HOST': 'sql12.freesqldatabase.com',
-        'PORT': '3306',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'hospitalmanagement_o0ed',
+        'USER': 'udayram01',
+        'PASSWORD': 'IdVOoripBExtoizdTMH8XytNfnqksFvI',
+        'HOST': 'dpg-d1c31ube5dus73f54ip0-a',
+        'PORT': '5432',
     }
 }
-
-
-
 
 
 # Password validation
