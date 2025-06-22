@@ -56,7 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -150,7 +150,7 @@ STATICFILES_DIRS = [
 ]
 import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 
 
@@ -169,3 +169,4 @@ AUTHENTICATION_BACKENDS = [
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'patient_dashboard'  # Where to redirect after successful login
 LOGOUT_REDIRECT_URL = 'homebase'
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "fallback-secret")
