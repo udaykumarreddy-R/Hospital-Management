@@ -170,3 +170,19 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'patient_dashboard'  # Where to redirect after successful login
 LOGOUT_REDIRECT_URL = 'homebase'
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "df)#8_fa96pe7vl$y!4esh5sio&@!7umkt*2^dyqy#1&xu@(!6")
+
+import logging
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
