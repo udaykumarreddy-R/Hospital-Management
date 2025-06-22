@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-v2)v#w(n3ai@0t!)xuyy3a8su6qovv8)rc=@9=fty!lx2)np)="
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 #new
 TEMPLATE_DEBUG = DEBUG
 #new
@@ -100,13 +100,18 @@ WSGI_APPLICATION = "hospitalmanagement.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hospitalmanagement',
-        'USER': 'root',
-        'PASSWORD': 'Uday@236',
-        'HOST': 'localhost',
+        'NAME': 'sql12786240',
+        'USER': 'sql12786240',
+        'PASSWORD': 'dmJ5GUFALA',
+        'HOST': 'sql12.freesqldatabase.com',
         'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
+
+
 
 
 
