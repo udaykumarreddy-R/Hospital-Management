@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-v2)v#w(n3ai@0t!)xuyy3a8su6qovv8)rc=@9=fty!lx2)np)="
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #new
 TEMPLATE_DEBUG = DEBUG
 #new
@@ -56,6 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -95,14 +96,13 @@ WSGI_APPLICATION = "hospitalmanagement.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'udayram01$hospitalmanagement',
-        'USER': 'udayram01',
-        'PASSWORD': 'Uday@236',
-        'HOST': 'udayram01.mysql.pythonanywhere-services.com',
+        'NAME': 'sql12786240',
+        'USER': 'sql12786240',
+        'PASSWORD': 'dmJ5GUFALA',
+        'HOST': 'sql12.freesqldatabase.com',
         'PORT': '3306',
     }
 }
@@ -169,16 +169,3 @@ AUTHENTICATION_BACKENDS = [
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'patient_dashboard'  # Where to redirect after successful login
 LOGOUT_REDIRECT_URL = 'homebase'
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'root': {
-        'handlers': ['console'],
-        'level': 'DEBUG',
-    },
-}
