@@ -56,7 +56,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -100,13 +99,14 @@ WSGI_APPLICATION = "hospitalmanagement.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hospitalmanagement',
-        'USER': 'root',
+        'NAME': 'udayram01$hospitalmanagement',
+        'USER': 'udayram01',
         'PASSWORD': 'Uday@236',
-        'HOST': 'localhost',
+        'HOST': 'udayram01.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
+
 
 
 
