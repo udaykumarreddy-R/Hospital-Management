@@ -25,14 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-v2)v#w(n3ai@0t!)xuyy3a8su6qovv8)rc=@9=fty!lx2)np)="
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #new
 TEMPLATE_DEBUG = DEBUG
 #new
 print("BASE_DIR: ", BASE_DIR)
 print("Templates DIRS: ", os.path.join(BASE_DIR, 'hospital', 'templates'))
 
-ALLOWED_HOSTS = ['hospital-management-3-jlpn.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -96,18 +96,17 @@ WSGI_APPLICATION = "hospitalmanagement.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hospitalmanagement_o0ed',
-        'USER': 'udayram01',
-        'PASSWORD': 'IdVOoripBExtoizdTMH8XytNfnqksFvI',
-        'HOST': 'dpg-d1c31ube5dus73f54ip0-a',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'hospitalmanagement',
+        'USER': 'root',
+        'PASSWORD': 'Uday@236',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
-
-
 
 
 
