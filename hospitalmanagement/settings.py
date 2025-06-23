@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-v2)v#w(n3ai@0t!)xuyy3a8su6qovv8)rc=@9=fty!lx2)np)="
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 #new
 TEMPLATE_DEBUG = DEBUG
 #new
@@ -169,3 +169,16 @@ AUTHENTICATION_BACKENDS = [
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'patient_dashboard'  # Where to redirect after successful login
 LOGOUT_REDIRECT_URL = 'homebase'
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
