@@ -96,16 +96,14 @@ WSGI_APPLICATION = "hospitalmanagement.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
-import os
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('DB_NAME', 'sql12786240'),
-        'USER': os.getenv('DB_USER', 'sql12786240'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'dmJ5GUFALA'),
-        'HOST': os.getenv('DB_HOST', 'sql12.freesqldatabase.com'),
-        'PORT': os.getenv('DB_PORT', '3306'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'hospitalmanagement_o0ed',
+        'USER': 'udayram01',
+        'PASSWORD': 'IdVOoripBExtoizdTMH8XytNfnqksFvI',
+        'HOST': 'dpg-d1c31ube5dus73f54ip0-a',
+        'PORT': '5432',
     }
 }
 
