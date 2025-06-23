@@ -25,14 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-v2)v#w(n3ai@0t!)xuyy3a8su6qovv8)rc=@9=fty!lx2)np)="
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 #new
 TEMPLATE_DEBUG = DEBUG
 #new
 print("BASE_DIR: ", BASE_DIR)
 print("Templates DIRS: ", os.path.join(BASE_DIR, 'hospital', 'templates'))
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['hospital-management-3-jlpn.onrender.com']
 
 
 # Application definition
@@ -96,16 +96,19 @@ WSGI_APPLICATION = "hospitalmanagement.wsgi.application"
 #         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
+import os
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sql12786240',
-        'USER': 'sql12786240',
-        'PASSWORD': 'dmJ5GUFALA',
-        'HOST': 'sql12.freesqldatabase.com',
-        'PORT': '3306',
+        'NAME': os.getenv('DB_NAME', 'sql12786240'),
+        'USER': os.getenv('DB_USER', 'sql12786240'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'dmJ5GUFALA'),
+        'HOST': os.getenv('DB_HOST', 'sql12.freesqldatabase.com'),
+        'PORT': os.getenv('DB_PORT', '3306'),
     }
 }
+
 
 
 
