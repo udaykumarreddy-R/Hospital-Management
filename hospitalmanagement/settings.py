@@ -104,7 +104,7 @@ DATABASES = {
         'NAME': 'hospitalmanagement',
         'USER': 'root',
         'PASSWORD': 'Uday@236',
-        'HOST': 'ec2-13-127-16-237.ap-south-1.compute.amazonaws.com',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
