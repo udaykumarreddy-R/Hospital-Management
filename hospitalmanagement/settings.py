@@ -102,7 +102,8 @@ DATABASES = {
         'NAME': 'hospitalmanagement',
         'USER': 'root',
         'PASSWORD': 'Uday@236',
-        'HOST': 'ec2-15-206-122-47.ap-south-1.compute.amazonaws.com',
+'HOST': 'your-internal-db-host.kuberns.local',
+
         'PORT': '3306',
     }
 }
