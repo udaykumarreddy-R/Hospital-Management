@@ -32,7 +32,7 @@ TEMPLATE_DEBUG = DEBUG
 print("BASE_DIR: ", BASE_DIR)
 print("Templates DIRS: ", os.path.join(BASE_DIR, 'hospital', 'templates'))
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'django-main-41bb76d.kuberns.cloud']
+ALLOWED_HOSTS = ['django-main-41bb76d.kuberns.cloud']
 
 # Application definition
 
@@ -102,7 +102,7 @@ DATABASES = {
         'NAME': 'hospitalmanagement',
         'USER': 'root',
         'PASSWORD': 'Uday@236',
-        'HOST': 'localhost',
+        'HOST': 'ec2-15-206-122-47.ap-south-1.compute.amazonaws.com',
         'PORT': '3306',
     }
 }
