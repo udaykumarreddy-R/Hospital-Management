@@ -32,10 +32,7 @@ TEMPLATE_DEBUG = DEBUG
 print("BASE_DIR: ", BASE_DIR)
 print("Templates DIRS: ", os.path.join(BASE_DIR, 'hospital', 'templates'))
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.trycloudflare.com']
-CSRF_TRUSTED_ORIGINS = ['https://*.trycloudflare.com']
-
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'django-main-41bb76d.kuberns.cloud']
 
 # Application definition
 
