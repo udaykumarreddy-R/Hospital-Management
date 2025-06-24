@@ -25,15 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-v2)v#w(n3ai@0t!)xuyy3a8su6qovv8)rc=@9=fty!lx2)np)="
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 #new
 TEMPLATE_DEBUG = DEBUG
 #new
 print("BASE_DIR: ", BASE_DIR)
 print("Templates DIRS: ", os.path.join(BASE_DIR, 'hospital', 'templates'))
 
-ALLOWED_HOSTS = ['udayram01.pythonanywhere.com']
-
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.trycloudflare.com']
+CSRF_TRUSTED_ORIGINS = ['https://*.trycloudflare.com']
 
 
 
