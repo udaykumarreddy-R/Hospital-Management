@@ -32,7 +32,7 @@ TEMPLATE_DEBUG = DEBUG
 print("BASE_DIR: ", BASE_DIR)
 print("Templates DIRS: ", os.path.join(BASE_DIR, 'hospital', 'templates'))
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercep.app', '.now.sh', '127.0.0.1', 'localhost']
 
 # Application definition
 
