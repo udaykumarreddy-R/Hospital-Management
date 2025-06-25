@@ -32,7 +32,7 @@ TEMPLATE_DEBUG = DEBUG
 print("BASE_DIR: ", BASE_DIR)
 print("Templates DIRS: ", os.path.join(BASE_DIR, 'hospital', 'templates'))
 
-ALLOWED_HOSTS = ['django-main-41bb76d.kuberns.cloud']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -101,9 +101,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'hospitalmanagement',
         'USER': 'root',
-        'PASSWORD': 'Uday@236',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'PASSWORD': 'pLUikTXSwLxvIqWKoHNtqPdTeznAtbvQ',
+        'HOST': 'gondola.proxy.rlwy.net',
+        'PORT': '15960',
     }
 }
 

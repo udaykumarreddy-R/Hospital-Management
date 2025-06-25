@@ -258,6 +258,7 @@ body {
 .header-top,
 .header-bottom .btn {
   display: none;
+  background-color: white;
 }
 
 .header-bottom {

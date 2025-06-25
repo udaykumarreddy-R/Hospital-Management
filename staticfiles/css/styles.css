@@ -738,7 +738,7 @@ border-radius: 8px;
   #CTA
 \*-----------------------------------*/
 
-.cta { background-color: hsl(194.11deg 70% 18%); }
+.cta { background-color: whitesmoke; }
 
 .cta-banner { margin-block-end: 50px;}
 
@@ -764,7 +764,7 @@ margin-bottom:-45px
 \*-----------------------------------*/
 
 .footer-top {
-  background-color: var(--oxford-blue-2);
+  background-color: whitesmoke;
   color:  #ffce00;
 }
 
